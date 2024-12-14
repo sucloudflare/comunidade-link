@@ -268,21 +268,21 @@ h1, h2, h3, h4, h5 {
 
 
 <!-- Menu -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Comunidade Link</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a class="nav-link" href="javascript:void(0);" onclick="mostrarSection('home')">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="javascript:void(0);" onclick="mostrarSection('jogos')">Jogos</a></li>
-        <li class="nav-item"><a class="nav-link" href="javascript:void(0);" onclick="mostrarSection('telegram')">Telegram</a></li>
-        <li class="nav-item"><a class="nav-link" href="javascript:void(0);" onclick="mostrarSection('github')">GitHub</a></li>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Comunidade Link</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-bars"></i> <!-- Ícone do menu -->
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link" href="javascript:void(0);" onclick="mostrarSection('home')">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="javascript:void(0);" onclick="mostrarSection('jogos')">Jogos</a></li>
+      <li class="nav-item"><a class="nav-link" href="javascript:void(0);" onclick="mostrarSection('telegram')">Telegram</a></li>
+      <li class="nav-item"><a class="nav-link" href="javascript:void(0);" onclick="mostrarSection('github')">GitHub</a></li>
+    </ul>
+  </div>
+</nav>
 
-      </ul>
-    </div>
-  </nav>
   <!-- Conteúdo -->
   <div class="container">
     <div id="home" class="section">
@@ -509,6 +509,12 @@ document.addEventListener('DOMContentLoaded', () => {
   mostrarSection('home');
 });
 
+
+  $(document).ready(function(){
+    $('.navbar-toggler').click(function(){
+      $(this).find('i').toggleClass('fa-bars fa-times');
+    });
+  });
 
 </script>
 </html>
